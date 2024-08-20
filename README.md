@@ -25,7 +25,7 @@ Este projeto foi desenvolvido como parte dos meus estudos em Java, com o objetiv
 
 ### Exemplo de Uso
 
-Ao iniciar o sistema, o usuário pode criar um curso chamado "Java", com carga horária de 40 horas e código 100. Em seguida, o usuário pode adicionar alunos como "Wadson", "Rute" e "Ferreira". O sistema gerará automaticamente as matrículas 101, 102 e 103 para esses alunos, respectivamente.
+Ao iniciar o sistema, o usuário pode criar um curso chamado "Java", com carga horária de 40 horas e código 100. Em seguida, o usuário pode adicionar alunos como "Wadson", "Rute" e "Cleiton". O sistema gerará automaticamente as matrículas 101, 102 e 103 para esses alunos, respectivamente.
 
 O sistema foi desenvolvido com o apoio do ChatGPT, que auxiliou nas dúvidas em todas as etapas, desde a concepção até a resolução dos desafios. Um dos principais desafios superados foi a implementação da geração automática de matrículas, que envolveu a utilização de lógica de programação combinada com a tecnologia `Stream` do Java, a qual utilizei pela primeira vez neste projeto.
 
