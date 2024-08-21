@@ -8,8 +8,10 @@ import SistemaGerenciamentoDeCursos.Dominio.*;
 public class TesteSistema {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         ArrayList<Curso> cursos = new ArrayList<>();
+
+        AlunoManager alunoManager = AlunoManager.newInstance(scanner, cursos);
+        CursoManager cursoManager = CursoManager.newInstance(scanner, cursos);
 
         while (true) {
             System.out.println("Escolha uma opção:");
@@ -22,17 +24,23 @@ public class TesteSistema {
             int opcao = scanner.nextInt();
             scanner.nextLine();
             switch (opcao) {
-                case 1: CadastrarCurso.cadastrar(scanner, cursos);
+                case 1:
+                    cursoManager.cadastrar();
                     break;
-                case 2: AdicionarAluno.adicionar(scanner, cursos);
+                case 2:
+                    alunoManager.adicionarAluno();
                     break;
-                case 3: RemoverAluno.remover(scanner, cursos);
+                case 3:
+                    alunoManager.removerAluno();
                     break;
-                case 4: ListarCursos.listar(cursos);
+                case 4:
+                    cursoManager.listar();
                     break;
-                case 5: encerrarSistema(scanner);
-                    return;
-                default: lidarComOpcaoInvalida();
+                case 5:
+                    encerrarSistema(scanner);
+                    break;
+                default:
+                    lidarComOpcaoInvalida();
                     break;
             }
         }
