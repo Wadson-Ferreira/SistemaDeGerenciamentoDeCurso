@@ -3,7 +3,6 @@ package SistemaGerenciamentoDeCursos.Dominio;
 public class Aluno {
     private String nome;
     private int numeroMatricula;
-    private static int contadorMatricula=0;
     private Curso curso;
 
     public Aluno(String nome) {
@@ -11,10 +10,7 @@ public class Aluno {
     }
 
     public void gerarNumeroMatricula(Curso curso) {
-        if (curso != null){
-            contadorMatricula++;
-            this.numeroMatricula = curso.getCodigoCurso() * 100 + contadorMatricula;
-        }
+       this.numeroMatricula = curso.gerarNumeroMatricula();
     }
 
     public String getNome() {

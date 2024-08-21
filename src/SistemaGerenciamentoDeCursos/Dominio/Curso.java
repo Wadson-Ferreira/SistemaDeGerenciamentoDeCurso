@@ -6,6 +6,7 @@ public class Curso {
     private int cargaHoraria;
     private int codigoCurso;
     private ArrayList<Aluno> alunos = new ArrayList<>();
+    private int contadorMAtricula = 0;
 
     public Curso(String nome, int cargaHoraria, int codigoCurso) {
         this.nome = nome;
@@ -36,13 +37,18 @@ public class Curso {
 
     public void removerAluno(Aluno aluno){
         alunos.remove(aluno);
-        aluno.setCurso(null); // Remove a associação do curso do aluno
+        aluno.setCurso(null);
     }
 
     public void listarAlunos() {
         for (Aluno aluno : alunos) {
             System.out.println("Aluno: " + aluno.getNome() + ", Matrícula: " + aluno.getNumeroMatricula());
         }
+    }
+
+    public int gerarNumeroMatricula(){
+        contadorMAtricula++;
+        return codigoCurso * 100 + contadorMAtricula;
     }
 
 }
