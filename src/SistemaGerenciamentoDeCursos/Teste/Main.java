@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import SistemaGerenciamentoDeCursos.Dominio.*;
 
-public class TesteSistema {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Curso> cursos = new ArrayList<>();

@@ -10,7 +10,11 @@ public class Aluno {
     }
 
     public void gerarNumeroMatricula(Curso curso) {
-       this.numeroMatricula = curso.gerarNumeroMatricula();
+        if (curso != null) {
+            this.numeroMatricula = curso.gerarNumeroMatricula();
+        } else {
+            System.out.println("Curso é null, não é possível gerar matrícula.");
+        }
     }
 
     public String getNome() {
@@ -31,6 +35,8 @@ public class Aluno {
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+        if(curso != null){
         gerarNumeroMatricula(curso);
+        }
     }
 }

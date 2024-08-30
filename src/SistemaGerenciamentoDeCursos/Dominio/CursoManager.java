@@ -42,10 +42,12 @@ public class CursoManager {
             System.out.println("Nenhum curso registrado ainda");
         } else {
             for (Curso c : cursos) {
-                System.out.println("Curso: " + c.getNome() + ", código do curso: " + c.getCodigoCurso());
+                System.out.println("Curso: " + c.getNome() + ", código do " +
+                        "curso: " + c.getCodigoCurso() + ", Carga Horária: " + c.getCargaHoraria() +" Horas");
                 c.getAlunos().forEach(a -> System.out.println("Aluno: " + a.getNome() + ", Matrícula: " + a.getNumeroMatricula()));
+                System.out.println("---------------------------------");
             }
         }
-        System.out.println("---------------------------------");
+
     }
 }
